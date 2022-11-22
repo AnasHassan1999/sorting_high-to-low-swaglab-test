@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -54,8 +55,12 @@ public class Sortig_high_to_low {
 
 		System.out.println(doubleprice);
 		
-		//for (int i = 0; i < doubleprice.size(); i++) {
+		for (int i = 0; i < doubleprice.size(); i++) {
 
+			boolean check=doubleprice.get(0)>doubleprice.get(doubleprice.size()-1);
+			
+			Assert.assertEquals(true, check);
+			
 		}
 	}
 
